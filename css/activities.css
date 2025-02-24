@@ -200,39 +200,3 @@
 .timeline-item:nth-child(even) {
     padding-right: 2rem;
 }
-
-@media (max-width: 768px) {
-    .activities-hero {
-        height: 40vh;
-    }
-
-    .activity-section {
-        padding: 2rem 0;
-    }
-
-    .timeline::before {
-        left: 2rem;
-    }
-
-    .timeline-item {
-        width: calc(100% - 4rem);
-        margin-left: 4rem !important;
-        padding: 0 !important;
-    }
-
-    .activity-section.hero {
-        height: 40vh;
-    }
-
-    .section-title {
-        font-size: 1.5rem;
-    }
-
-    .activity-gallery {
-        grid-template-columns: 1fr;
-    }
-    
-    .activity-header {
-        height: 300px;
-    }
-}

@@ -1,30 +1,37 @@
 document.addEventListener('DOMContentLoaded', function() {
     const navToggle = document.querySelector('.nav-toggle');
     const navMenu = document.querySelector('.nav-menu');
-    const menuLinks = document.querySelectorAll('.nav-menu a');
+    const body = document.body;
 
-    // Toggle menu
-    navToggle.addEventListener('click', function() {
+    // Create overlay element
+    const overlay = document.createElement('div');
+    overlay.className = 'overlay';
+    document.body.appendChild(overlay);
+
+    function toggleMenu() {
         navToggle.classList.toggle('active');
         navMenu.classList.toggle('active');
-        document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
-    });
+        overlay.classList.toggle('active');
+        body.classList.toggle('menu-open');
+    }
+
+    // Toggle menu
+    navToggle.addEventListener('click', toggleMenu);
+
+    // Close menu when clicking overlay
+    overlay.addEventListener('click', toggleMenu);
 
     // Close menu when clicking menu items
-    menuLinks.forEach(link => {
+    document.querySelectorAll('.nav-menu a').forEach(link => {
         link.addEventListener('click', () => {
-            navToggle.classList.remove('active');
-            navMenu.classList.remove('active');
-            document.body.style.overflow = '';
+            toggleMenu();
         });
     });
 
-    // Close menu when clicking outside
-    document.addEventListener('click', (e) => {
-        if (!navToggle.contains(e.target) && !navMenu.contains(e.target)) {
-            navToggle.classList.remove('active');
-            navMenu.classList.remove('active');
-            document.body.style.overflow = '';
+    // Close menu on window resize if open
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 768 && navMenu.classList.contains('active')) {
+            toggleMenu();
         }
     });
 

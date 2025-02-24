@@ -29,3 +29,4 @@ document.querySelector('.menu').appendChild(menuToggle);
 menuToggle.addEventListener('click', () => {
     document.querySelector('.menu ul').classList.toggle('active');
 });
+

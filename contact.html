@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liên hệ - Lớp 12A7</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-brand">
+                <a href="index.html">Lớp 12A7</a>
+            </div>
+            <button class="nav-toggle">
+                <span class="hamburger"></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="members.html">Thành viên</a></li>
+                <li><a href="activities.html">Hoạt động</a></li>
+                <li><a href="gallery.html">Thư viện ảnh</a></li>
+                <li><a href="contact.html" class="active">Liên hệ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="contact-container">
+        <div class="contact-hero">
+            <div class="contact-hero-content">
+                <h1>Liên Hệ Với Chúng Tôi</h1>
+                <p>Hãy để lại lời nhắn, chúng tôi sẽ phản hồi sớm nhất có thể</p>
+            </div>
+            <div class="contact-hero-pattern"></div>
+        </div>
+
+        <div class="contact-wrapper">
+            <div class="contact-info-cards">
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="info-content">
+                        <h3>Địa chỉ</h3>
+                        <p>Trường THPT Chu Văn An</p>
+                        <p>Khóm Mươn Nhà Máy, Phường An Thạnh</p>
+                        <p>TP. Hồng Ngự, Đồng Tháp</p>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <div class="info-content">
+                        <h3>Điện thoại</h3>
+                        <p>Văn phòng: <a href="tel:02773837308">0277.3837.308</a></p>
+                        <p>GVCN: <a href="tel:0949878218">094.987.8218</a></p>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="info-content">
+                        <h3>Email</h3>
+                        <a href="mailto:thpt.chuvanan.dongthap@moet.edu.vn">
+                            thpt.chuvanan.dongthap@moet.edu.vn
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form-section">
+                <div class="form-container">
+                    <h2>Gửi Tin Nhắn</h2>
+                    <form id="contactForm" class="animated-form">
+                        <div class="form-group floating">
+                            <input type="text" id="name" required>
+                            <label for="name">Họ và tên</label>
+                        </div>
+
+                        <div class="form-group floating">
+                            <input type="email" id="email" required>
+                            <label for="email">Email</label>
+                        </div>
+
+                        <div class="form-group floating">
+                            <input type="tel" id="phone" required>
+                            <label for="phone">Số điện thoại</label>
+                        </div>
+
+                        <div class="form-group floating">
+                            <textarea id="message" rows="4" required></textarea>
+                            <label for="message">Tin nhắn</label>
+                        </div>
+
+                        <button type="submit" class="submit-btn">
+                            <span>Gửi tin nhắn</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="map-section">
+            <div class="map-container">
+                <h2>Vị Trí Của Chúng Tôi</h2>
+                <div class="map-wrapper">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3915.3790392212166!2d105.3432441!3d10.8173305!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x310a36e2085b3e11%3A0x4caad911b9c69737!2zVHLGsOG7nW5nIFRIUFQgQ2h1IFbEg24gQW4!5e0!3m2!1svi!2s!4v1711425698646!5m2!1svi!2s"
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Trường THPT Chu Văn An</h3>
+                <p>Khóm Mươn Nhà Máy, Phường An Thạnh</p>
+                <p>TP. Hồng Ngự, Đồng Tháp</p>
+            </div>
+            <div class="footer-section">
+                <h3>Liên hệ</h3>
+                <p>Email: thpt.chuvanan.dongthap@moet.edu.vn</p>
+                <p>Phone: 0277.3837.308</p>
+            </div>
+            <div class="footer-section">
+                <h3>Theo dõi</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Phan Trung Tỷ - Lớp 12A7 - THPT Chu Văn An. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/contact.js"></script>
+</body>
+</html>

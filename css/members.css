@@ -130,7 +130,7 @@
 /* Leaders Grid */
 .leaders-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(4, 1fr);  /* Changed to exactly 4 columns */
     gap: 2rem;
     padding: 0 2rem;
     max-width: 1200px;
@@ -216,13 +216,65 @@
 }
 
 /* Responsive Design */
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
     .leaders-grid {
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        grid-template-columns: repeat(4, 1fr); /* Maintain 4 columns */
+        gap: 1.5rem;
+    }
+
+    .members-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .leaders-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
+        gap: 1.5rem;
     }
 
     .leader-card {
-        height: 300px;
+        height: 380px; /* Slightly taller for better visibility */
+    }
+
+    .members-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .leaders-grid {
+        grid-template-columns: 1fr; /* Single column */
+        max-width: 400px; /* Limit width for better appearance */
+        margin: 0 auto;
+        gap: 2rem;
+    }
+    
+    .leader-card {
+        height: 400px; /* Taller cards on mobile */
+    }
+    
+    .card-front img {
+        padding: 20px; /* More padding for images */
+    }
+}
+
+@media (max-width: 576px) {
+    .leaders-grid {
+        grid-template-columns: 1fr; /* Single column on mobile */
+        gap: 1rem;
+    }
+    
+    .leader-card {
+        height: 320px; /* Slightly shorter on mobile */
+    }
+
+    .members-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 0 1rem;
     }
 }
 
@@ -252,10 +304,41 @@
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
 }
 
 .student-card:hover {
     transform: translateY(-5px);
+}
+
+.student-image {
+    position: relative;
+    width: 100%;
+    padding-top: 100%; /* Create 1:1 aspect ratio */
+    background: #f8f9fa;
+}
+
+.student-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Prevent image cropping */
+    padding: 15px;
+}
+
+.student-info {
+    padding: 1rem;
+    text-align: center;
+    background: linear-gradient(to bottom, #ffffff 0%, #f8f9fa 100%);
+}
+
+.student-info h3 {
+    margin: 0;
+    font-size: 1rem;
+    color: #333;
 }
 
 /* Responsive adjustments */
